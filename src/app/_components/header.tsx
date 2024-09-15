@@ -1,5 +1,7 @@
 import {
   Bell,
+  Blocks,
+  LayoutTemplate,
   Notebook,
   Package2,
   Video,
@@ -14,7 +16,7 @@ import { DashboardIcon, DashIcon } from "@radix-ui/react-icons";
 function Header() {
   return (
     <>
-      <div className="hidden border-r bg-muted/40 md:block">
+      <div className="hidden border-r bg-muted/5 md:block">
         <div className="flex h-full max-h-screen flex-col gap-2 sticky top-0">
           <div className="flex h-14 items-center border-b px-4 lg:h-[60px] lg:px-6 sticky top-0">
             <Link href="/" className="flex items-center gap-2 font-semibold">
@@ -30,24 +32,40 @@ function Header() {
             <nav className="grid items-start px-2 text-sm font-medium lg:px-4">
               <Link
                 href="/"
-                className="flex items-center gap-3 rounded-lg px-3 py-2"
+                className="flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-muted/5"
               >
                 <DashboardIcon className="h-4 w-4" />
                 Home
               </Link>
               <Link
                 href="/html-and-css"
-                className="flex items-center gap-3 rounded-lg px-3 py-2"
+                className="flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-muted/5"
               >
                 <Video className="h-4 w-4" />
                 HTML & CSS
               </Link>
               <Link
                 href="/reactjs-components"
-                className="flex items-center gap-3 rounded-lg px-3 py-2"
+                className="flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-muted/5"
               >
                 <Notebook className="h-4 w-4" />
                 ReactJS Components
+              </Link>
+
+              <Link
+                href="/templates"
+                className="flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-muted/5"
+              >
+                <LayoutTemplate className="h-4 w-4" />
+                Templates
+              </Link>
+
+              <Link
+                href="/blocks"
+                className="flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-muted/5"
+              >
+                <Blocks className="h-4 w-4" />
+                Block
               </Link>
             </nav>
           </div>

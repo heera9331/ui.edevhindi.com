@@ -1,6 +1,6 @@
 import React from "react";
 
-function TableCode() {
+function TableCode(): any {
   return (
     <div className="relative overflow-x-auto">
       <table className="border w-full table-auto">

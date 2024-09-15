@@ -17,7 +17,14 @@ import {
 function MobileHeader() {
   return (
     <>
-      <header className="flex h-14 items-center gap-4 border-b bg-muted/40 px-4 lg:h-[60px] lg:px-6" style={{position: "sticky", top: "0"}}>
+      <header
+        className="flex h-14 items-center gap-4 border-b bg-muted/5 px-4 lg:h-[60px] lg:px-6"
+        style={{
+          position: "sticky",
+          top: "0",
+          backdropFilter: "blur(2px)",
+        }}
+      >
         <Sheet>
           <SheetTrigger asChild>
             <Button

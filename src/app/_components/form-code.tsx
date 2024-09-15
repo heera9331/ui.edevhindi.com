@@ -8,18 +8,39 @@ import toast, { Toaster } from "react-hot-toast";
 
 function FormCode() {
   const formCode = `
-<form action="#" method="get" className="bg-white p-4 my-2 border rounded-sm">
+<form
+  action="#"
+  method="get"
+  className="bg-muted/5 text-white p-4 my-2 border rounded-sm"
+>
   <h2 className="mb-2">Login</h2>
   <div className="flex flex-col gap-2 mb-2">
     <label htmlFor="username">Username</label>
-    <input type="text" id="username" name="username" placeholder="Enter user name" className="border rounded-sm p-2" />
+    <input
+      type="text"
+      id="username"
+      name="username"
+      placeholder="Enter user name"
+      className="border rounded-sm p-2 bg-muted/10 focus:outline-none"
+    />
   </div>
   <div className="flex flex-col gap-2 mb-2">
     <label htmlFor="password">Password</label>
-    <input type="password" id="password" name="password" placeholder="Enter password" className="border rounded-sm p-2" />
+    <input
+      type="password"
+      id="password"
+      name="password"
+      placeholder="Enter password"
+      className="border rounded-sm p-2 bg-muted/10 focus:outline-none"
+    />
   </div>
   <div className="mb-2">
-    <button type="submit" className="border px-2 py-1 rounded-sm mt-2">Login</button>
+    <button
+      type="submit"
+      className="border px-2 py-1 rounded-sm mt-2 bg-muted/10"
+    >
+      Login
+    </button>
   </div>
 </form>
   `;
@@ -36,23 +57,14 @@ function FormCode() {
       {/* Toast container */}
 
       <Tabs defaultValue="preview" className="">
-        <TabsList className="flex justify-start border-b rounded-none bg-white bg-muted/40">
-          <TabsTrigger
-            className="font-semibold text-md rounded-sm active:text-black active:shadow-none"
-            value="preview"
-          >
+        <TabsList className="flex justify-start border-b rounded-none bg-muted/5">
+          <TabsTrigger className="" value="preview">
             Preview
           </TabsTrigger>
-          <TabsTrigger
-            className="font-semibold text-md rounded-sm active:text-black active:shadow-none"
-            value="code"
-          >
+          <TabsTrigger className="" value="code">
             JSX
           </TabsTrigger>
-          <TabsTrigger
-            className="font-semibold text-md rounded-sm active:text-black active:shadow-none"
-            value="code2"
-          >
+          <TabsTrigger className=" " value="code2">
             Code (HTML + CSS)
           </TabsTrigger>
         </TabsList>
@@ -60,7 +72,7 @@ function FormCode() {
           <form
             action="#"
             method="get"
-            className="bg-white p-4 my-2 border rounded-sm"
+            className="bg-muted/5 text-white p-4 my-2 border rounded-sm"
           >
             <h2 className="mb-2">Login</h2>
             <div className="flex flex-col gap-2 mb-2">
@@ -70,7 +82,7 @@ function FormCode() {
                 id="username"
                 name="username"
                 placeholder="Enter user name"
-                className="border rounded-sm p-2"
+                className="border rounded-sm p-2 bg-muted/10 focus:outline-none"
               />
             </div>
             <div className="flex flex-col gap-2 mb-2">
@@ -80,13 +92,13 @@ function FormCode() {
                 id="password"
                 name="password"
                 placeholder="Enter password"
-                className="border rounded-sm p-2"
+                className="border rounded-sm p-2 bg-muted/10 focus:outline-none"
               />
             </div>
             <div className="mb-2">
               <button
                 type="submit"
-                className="border px-2 py-1 rounded-sm mt-2"
+                className="border px-2 py-1 rounded-sm mt-2 bg-muted/10"
               >
                 Login
               </button>
@@ -122,7 +134,7 @@ function FormCode() {
         <select
           name="language"
           id="language"
-          className="border px-2 py-1 rounded-sm"
+          className="border px-2 py-1 rounded-sm bg-muted/10"
         >
           <option disabled>select</option>
           <option value="CSS">CSS</option>
@@ -139,7 +151,7 @@ function FormCode() {
         <select
           name="language"
           id="language"
-          className="border px-2 py-1 rounded-sm w-full"
+          className="border px-2 py-1 rounded-sm w-full bg-muted/10"
         >
           <option disabled>select</option>
           <option value="CSS">CSS</option>
@@ -148,12 +160,17 @@ function FormCode() {
         </select>
       </div>
 
-
       <h2 className="mt-4">Date picker</h2>
       <div className="mb-4">
-        <p className="text-gray-500 py-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi velit eius, alias dolore vitae nobis cupiditate obcaecati laborum ea et animi quos nemo dolores consectetur, aliquid a sapiente. Quam architecto qui itaque, omnis quae mollitia repellat facere. Asperiores iste recusandae, reprehenderit nostrum possimus tenetur similique in, saepe maxime molestias corporis?</p>
+        <p className="text-gray-500 py-2">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi
+          velit eius, alias dolore vitae nobis cupiditate obcaecati laborum ea
+          et animi quos nemo dolores consectetur, aliquid a sapiente. Quam
+          architecto qui itaque, omnis quae mollitia repellat facere. Asperiores
+          iste recusandae, reprehenderit nostrum possimus tenetur similique in,
+          saepe maxime molestias corporis?
+        </p>
       </div>
-
     </>
   );
 }

@@ -81,10 +81,27 @@ h1 {
   font-size: 1.675rem;
 }
 
-div.ql-editor{
+div.ql-editor {
   height: 400px;
 }
 
 body {
   scroll-behavior: smooth;
+}
+
+/* styles.css */
+.main-gradient {
+  background: linear-gradient(
+    135deg,
+    black,
+    rgb(0, 0, 109),
+    black,
+    rgb(0, 0, 109),
+    black
+  );
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: fixed;
 }
