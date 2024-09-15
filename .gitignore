@@ -41,3 +41,5 @@ uploads
 *.zip
 *.idea
 *.vs-code
+*.env
+*.env.local
