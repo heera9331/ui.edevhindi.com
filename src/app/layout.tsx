@@ -9,19 +9,31 @@ import Loading from "./loading";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Edevhindi",
-  description: "A website for learner's",
-};
-
 const RootLayout = ({
   children,
+  metadata,
 }: Readonly<{
   children: React.ReactNode;
-}>) => {
+  metadata: Metadata;
+}>) => { 
+
   return (
     <html lang="en">
-      <body className="main-gradient text-white">
+      <head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="/favicon.ico" />
+        <title>Code Fragments</title>
+        <meta name="description" content={"Code Fragments is a website designed for learners and developers, offering resources and tools to enhance your productivity."} />
+        <meta name="keywords" content={ "Code Fragments, react components, html and css components, html and css with tailwind, code examples"} />
+        <meta name="author" content={"Heera Singh Lodhi"} />
+
+        {/* TODO: Open Graph Tags */} 
+
+        {/* TODO: Twitter Tags */}
+
+      </head>
+      <body className={`${inter.className}`}>
         <div className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
           <Header />
           <div className="flex flex-col">

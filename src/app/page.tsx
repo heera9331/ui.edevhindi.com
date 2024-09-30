@@ -7,20 +7,55 @@ import FormCode from "./_components/form-code";
 import { Toaster } from "react-hot-toast";
 import TableCode from "./_components/home-table-code";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: {
+    default: "Code Fragments - Speedup Your Development Journey",
+    template: "%s | Code Fragments",
+  },
+  description:
+    "Code Fragments is a website designed for learners and developers, offering resources and tools to enhance your productivity.",
+  keywords:
+    "Code Fragments, react components, html and css components, html and css with tailwind, code examples",
+  authors: [{ name: "Heera Singh Lodhi" }],
+  openGraph: {
+    title: "Code Fragments - Speedup Your Development Journey",
+    description:
+      "Code Fragments is a website designed for learners, offering resources and tools to enhance your education.",
+    url: "https://www.edevhindi.com",
+    siteName: "Code Fragments",
+    type: "website",
+    images: [
+      {
+        url: "https://www.edevhindi.com/logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Code Fragments - Speedup Your Development Journey",
+      },
+    ],
+  },
+  // Todo: Add Twitter metadata
+};
+
 function HomePage() {
   return (
     <div className="page grid grid-cols-12 px-2">
-      <div className="md:col-span-12 lg:col-span-8 pr-2">
+      <div className="md:col-span-12 lg:col-span-8 col-span-12 pr-2">
         <Toaster position="top-center" />
-        <section className="min-h-[90vh] flex flex-col justify-center items-center border-b">
-          <h1 className="mb-2">Most usable UI components for website/app</h1>
-          <Button className="bg-muted/5 border border/90 hover:border hover:bg-muted/5 transition-all delay-50 ease-in-out">
+        <section className="min-h-[60vh] md:min-h-[90vh] flex flex-col justify-center items-center border-b">
+          <h1 className="mb-2 text-center">
+            Most usable UI components for website/app
+          </h1>
+          <Button
+            variant={"default"}
+            className="bg-muted/5 border border/90 hover:border transition-all delay-50 ease-in-out bg-black text-white hover:bg-black/90"
+          >
             <Link href={"#section-2"}>Explore</Link>
           </Button>
         </section>
         <section id="section-2" className="min-h-screen border-b">
           <h2 className="text-3xl pt-2">Forms</h2>
-
           <div className="py-2">
             <p className="text-gray-500 my-2">
               Forms are used in many places in our website/app, that are used
@@ -29,8 +64,8 @@ function HomePage() {
               etc.
             </p>
             <p>
-              <strong className="pr-2"> Note</strong>
-              <span className="text-muted/50">
+              <strong className="pr-2">Note: </strong>
+              <span className="text-gray-500 ">
                 Make sure when you copy the form code, backgroun color should
                 gradient or color.
               </span>
@@ -39,7 +74,7 @@ function HomePage() {
           <FormCode />
 
           <Button className="mb-4 bg-muted/5 border border/90 hover:border hover:bg-muted/5 transition-all delay-50 ease-in-out">
-            <Link href={"#section-2"}>View Forms</Link>
+            <Link href={"#section-2"}>View More Forms Exaples</Link>
           </Button>
         </section>
         <section id="tables" className="min-h-screen border-b">
@@ -53,57 +88,37 @@ function HomePage() {
           <TableCode />
 
           <Button className="my-4 bg-muted/5 border border/90 hover:border hover:bg-muted/5 transition-all delay-50 ease-in-out">
-            <Link href={"/react-components/tables"}>View more tables</Link>
+            <Link
+              href={"/react-components/tables"}
+              className="text-gray-500 hover:text-gray-600"
+            >
+              View more tables
+            </Link>
           </Button>
         </section>
         <section className="min-h-screen border-b py-2">
           <h1>HTML & CSS Blocks/Components</h1>
 
           <div>
-            <p className="text-muted/50">
+            <p className="text-gray-500 my-2">
               We provide variety of pre build HTML & CSS Blocks/components, that
               is usefull for website/app and also save more time. you have to
               copy and paste the code in your project.
             </p>
           </div>
 
-          <Button className="mb-4 bg-muted/5 border border/90 hover:border hover:bg-muted/5 transition-all delay-50 ease-in-out">
+          <Button className="my-4 bg-muted/5 border border/90 hover:border hover:bg-muted/5 transition-all delay-50 ease-in-out text-gray-500 hover:text-gray-600">
             <Link href={"/html-and-css/"}>View HTML & CSS</Link>
           </Button>
-        </section>
-
-        <section className="min-h-screen flex justify-center items-center border-b">
-          <h1>Home Page</h1>
-        </section>
-
-        <section className="min-h-screen flex justify-center items-center border-b">
-          <h1>Home Page</h1>
-        </section>
-
-        <section className="min-h-screen flex justify-center items-center border-b">
-          <h1>Home Page</h1>
-        </section>
-        <section className="min-h-screen flex justify-center items-center border-b">
-          <h1>Home Page</h1>
-        </section>
-        <section className="min-h-screen flex justify-center items-center border-b">
-          <h1>Home Page</h1>
-        </section>
-        <section className="min-h-screen flex justify-center items-center border-b">
-          <h1>Home Page</h1>
-        </section>
-        <section className="min-h-screen flex justify-center items-center border-b">
-          <h1>Home Page</h1>
-        </section>
-        <section className="min-h-screen flex justify-center items-center border-b">
-          <h1>Home Page</h1>
         </section>
       </div>
 
       <div className="md:col-span-12 lg:col-span-4 border-l pl-2">
         <h2 className="font-semibold">New Updates</h2>
-        <div>
+        <div className="text-gray-500">
           <p>1.0.1: background gradient</p>
+          <p>1.0.1: back to normal theme</p>
+          <p>1.0.1: 404 design</p>
         </div>
       </div>
     </div>
