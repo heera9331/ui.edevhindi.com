@@ -6,6 +6,71 @@ import SyntaxHighlighter from "react-syntax-highlighter";
 import { atomOneDarkReasonable } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import toast, { Toaster } from "react-hot-toast";
 
+const htmlCSSFromSrc=`
+<form action="#" method="get" class="form-container">
+  <h2 class="form-heading">Login</h2>
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" placeholder="Enter username" class="input-field">
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" placeholder="Enter password" class="input-field">
+  </div>
+  <div class="form-group">
+    <button type="submit" class="submit-button">Login</button>
+  </div>
+</form>
+
+<style>
+
+.form-container {
+  background-color: rgba(255, 255, 255, 0.1); /* bg-muted/5 */
+  padding: 16px;  
+  border: 1px solid #fff; 
+  border-radius: 4px;
+}
+
+.form-heading {
+  margin-bottom: 8px;
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.input-field {
+  border: 1px solid #fff;
+  border-radius: 4px; 
+  padding: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  outline: none;
+}
+
+.input-field:focus {
+  outline: 2px solid #4CAF50;
+}
+
+.submit-button {
+  border: 1px solid #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: #006400;
+  color: white;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #004d00;
+}
+
+</style>
+`;
+
 function FormCode() {
   const formCode = `
 <form
@@ -37,7 +102,7 @@ function FormCode() {
   <div className="mb-2">
     <button
       type="submit"
-      className="border px-2 py-1 rounded-sm mt-2 bg-muted/10"
+      className="border px-2 py-1 rounded-sm mt-2 bg-green-800 text-white"
     >
       Login
     </button>
@@ -72,7 +137,7 @@ function FormCode() {
           <form
             action="#"
             method="get"
-            className="bg-muted/5 text-white p-4 my-2 border rounded-sm"
+            className="bg-muted/5 text-gray-500 p-4 my-2 border rounded-sm"
           >
             <h2 className="mb-2">Login</h2>
             <div className="flex flex-col gap-2 mb-2">
@@ -98,7 +163,7 @@ function FormCode() {
             <div className="mb-2">
               <button
                 type="submit"
-                className="border px-2 py-1 rounded-sm mt-2 bg-muted/10"
+                className="border px-2 py-1 rounded-sm mt-2 bg-green-600 text-white"
               >
                 Login
               </button>
@@ -119,6 +184,24 @@ function FormCode() {
               showLineNumbers
             >
               {formCode}
+            </SyntaxHighlighter>
+          </div>
+        </TabsContent>
+
+        <TabsContent value="code2" className="pt-2">
+          <div className="bg-[#282c34] border rounded-sm p-2 relative">
+            <button
+              className="absolute top-2 right-2 bg-gray-700 text-white py-1 px-2 rounded"
+              onClick={handleCopyCode}
+            >
+              Copy
+            </button>
+            <SyntaxHighlighter
+              language="html"
+              style={atomOneDarkReasonable}
+              showLineNumbers
+            >
+              {htmlCSSFromSrc}
             </SyntaxHighlighter>
           </div>
         </TabsContent>
@@ -163,12 +246,7 @@ function FormCode() {
       <h2 className="mt-4">Date picker</h2>
       <div className="mb-4">
         <p className="text-gray-500 py-2">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi
-          velit eius, alias dolore vitae nobis cupiditate obcaecati laborum ea
-          et animi quos nemo dolores consectetur, aliquid a sapiente. Quam
-          architecto qui itaque, omnis quae mollitia repellat facere. Asperiores
-          iste recusandae, reprehenderit nostrum possimus tenetur similique in,
-          saepe maxime molestias corporis?
+          Date picker allow user to pick date, this date picker is provide interactivity with picker, it more then a normal date picker
         </p>
       </div>
     </>
