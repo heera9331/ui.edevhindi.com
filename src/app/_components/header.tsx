@@ -1,6 +1,9 @@
 import {
   Bell,
   Blocks,
+  Code,
+  Home,
+  HomeIcon,
   LayoutTemplate,
   Notebook,
   Package2,
@@ -10,6 +13,7 @@ import Link from "next/link";
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { DashboardIcon, DashIcon } from "@radix-ui/react-icons";
+import Image from "next/image";
 
 // TODO text-muted-foreground transition-all hover:text-primary bg-muted => add classes on active link
 
@@ -20,8 +24,14 @@ function Header() {
         <div className="flex h-full max-h-screen flex-col gap-2 sticky top-0">
           <div className="flex h-14 items-center border-b px-4 lg:h-[60px] lg:px-6 sticky top-0">
             <Link href="/" className="flex items-center gap-2 font-semibold">
-              <Package2 className="h-6 w-6" />
-              <span className="">ui.edevhindi.com</span>
+              <Image
+                src={"/assets/images/logo.png"}
+                width={100}
+                height={100}
+                className="h-10 w-10"
+                alt="code fragments"
+              />
+              <span className="">Code Fragments</span>
             </Link>
             <Button variant="outline" size="icon" className="ml-auto h-8 w-8">
               <Bell className="h-4 w-4" />
@@ -34,14 +44,14 @@ function Header() {
                 href="/"
                 className="flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-muted/5"
               >
-                <DashboardIcon className="h-4 w-4" />
+                <HomeIcon className="h-4 w-4" />
                 Home
               </Link>
               <Link
                 href="/html-and-css"
                 className="flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-muted/5"
               >
-                <Video className="h-4 w-4" />
+                <Code className="h-4 w-4" />
                 HTML & CSS
               </Link>
               <Link
@@ -65,7 +75,7 @@ function Header() {
                 className="flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-muted/5"
               >
                 <Blocks className="h-4 w-4" />
-                Block
+                Blocks
               </Link>
             </nav>
           </div>
