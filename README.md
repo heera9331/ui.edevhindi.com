@@ -42,4 +42,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 | **Attachment Details**       | Not applicable.                                        | Contains details like file URL, file path, dimensions (for images), and alternative text. |
 | **Associated Features**      | Categories, tags, comments, etc., that categorize and organize content. | Generally does not use categories or tags; instead, it is directly associated with the post it is attached to. |
 | **Relationship with `wp_postmeta`** | May have custom fields for additional information or settings. | Often has meta entries related to file properties (like `_wp_attached_file`, `_wp_attachment_metadata`). |
-# ui.edevhindi.com
+# Code Fragments
