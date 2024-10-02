@@ -73,7 +73,7 @@ function HomePage() {
           </div>
           <FormCode />
 
-          <Button className="mb-4 bg-muted/5 border border/90 hover:border hover:bg-muted/5 transition-all delay-50 ease-in-out">
+          <Button className="mb-4 bg-muted/5 border border/90 hover:border hover:bg-muted/5 transition-all delay-50 ease-in-out text-gray-500 hover:text-gray-600">
             <Link href={"#section-2"}>View More Forms Exaples</Link>
           </Button>
         </section>

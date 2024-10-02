@@ -6,6 +6,7 @@ import Header from "./_components/header";
 import { Toaster } from "@/components/ui";
 import { Suspense } from "react";
 import Loading from "./loading";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,8 +16,7 @@ const RootLayout = ({
 }: Readonly<{
   children: React.ReactNode;
   metadata: Metadata;
-}>) => { 
-
+}>) => {
   return (
     <html lang="en">
       <head>
@@ -24,14 +24,23 @@ const RootLayout = ({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon.ico" />
         <title>Code Fragments</title>
-        <meta name="description" content={"Code Fragments is a website designed for learners and developers, offering resources and tools to enhance your productivity."} />
-        <meta name="keywords" content={ "Code Fragments, react components, html and css components, html and css with tailwind, code examples"} />
+        <meta
+          name="description"
+          content={
+            "Code Fragments is a website designed for learners and developers, offering resources and tools to enhance your productivity."
+          }
+        />
+        <meta
+          name="keywords"
+          content={
+            "Code Fragments, react components, html and css components, html and css with tailwind, code examples"
+          }
+        />
         <meta name="author" content={"Heera Singh Lodhi"} />
 
-        {/* TODO: Open Graph Tags */} 
+        {/* TODO: Open Graph Tags */}
 
         {/* TODO: Twitter Tags */}
-
       </head>
       <body className={`${inter.className}`}>
         <div className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
@@ -41,6 +50,7 @@ const RootLayout = ({
             <Suspense fallback={<Loading />}>
               <main className="p-4 lg:gap-2 lg:p-2 min-h-screen ">
                 {children}
+                <Analytics />
               </main>
             </Suspense>
           </div>
