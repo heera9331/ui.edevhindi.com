@@ -42,6 +42,8 @@ export const metadata: Metadata = {
 function HomePage() {
   return (
     <div className="page grid grid-cols-12 px-2">
+
+      {/* ========= main =============== */}
       <div className="md:col-span-12 lg:col-span-8 col-span-12 pr-2">
         <Toaster position="top-center" />
         <section className="min-h-[60vh] md:min-h-[90vh] flex flex-col justify-center items-center border-b">
@@ -159,6 +161,8 @@ function HomePage() {
           </Button>
         </section>
       </div>
+
+      {/* =================== content right sidebar ================ */}
 
       <div className="md:col-span-12 lg:col-span-4 border-l pl-2">
         <h2 className="font-semibold">New Updates</h2>

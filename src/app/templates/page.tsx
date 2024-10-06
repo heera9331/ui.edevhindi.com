@@ -8,8 +8,10 @@ import ImageSlider from "@/components/slider";
 
 function Templates() {
   return (
-    <div className="page grid grid-cols-12 px-2">
-      <div className="md:col-span-12 lg:col-span-8 pr-2">
+    <div className="page px-2 grid grid-cols-12">
+
+      {/* ===== main ===== */}
+      <div className="col-span-12 md:col-span-12 lg:col-span-8 md:pr-2">
         <h1 className="mb-4 text-3xl" id="page-title">Templates</h1>
         <p className="">Temlates are complete pages of website that is best fit for your next project, here are some template if you like it then download use in your next project</p>
         <p className="text-gray-500"><b className="text-black">Note : </b>These templates are absolutely free for everyone, use it in any of projects.   </p>
@@ -104,9 +106,9 @@ function Templates() {
           alt="heera singh portfolio"
           width={1000}
           height={1000}
-        /> 
+        />
 
-<div className="flex gap-2">
+        <div className="flex gap-2">
           <Link
             target="_blank"
             href={'https://edevhindi.com/heera-singh'}
@@ -117,7 +119,7 @@ function Templates() {
               <LinkIcon className="pl-2 w-5 h-5" />
             </span>
           </Link>
-          <Link 
+          <Link
             href={'#'}
             className="flex gap-4  border px-4 py-2 rounded-xl"
           >
@@ -149,11 +151,14 @@ function Templates() {
           <li className="text-gray-600">Google icons</li>
         </ul>
 
-        <Separator className="h-10"/>
+        <Separator className="h-10" />
 
       </div>
 
-      <div className="md:col-span-12 lg:col-span-4 border-l pl-2 sticky top-2">
+
+      {/* ===== right content bar ====== */}
+
+      <div className="col-span-12 md:col-span-12 lg:col-span-4 md:border-l md:pl-2">
         <h2 className="font-semibold mb-2">Contents</h2>
         <div className="text-gray-500 flex flex-col gap-2">
           <Link href={'#page-title'}>
@@ -174,8 +179,6 @@ function Templates() {
           </Link>
         </div>
       </div>
-
-      
     </div>
   );
 }
