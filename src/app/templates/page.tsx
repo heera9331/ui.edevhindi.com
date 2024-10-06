@@ -4,6 +4,7 @@ import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 import { Separator } from "@radix-ui/react-separator";
+import ImageSlider from "@/components/slider";
 
 function Templates() {
   return (
@@ -86,12 +87,12 @@ function Templates() {
 
         <Separator className="h-5 mt-5 border-t" />
 
-        <h2 className="text-2xl">2. React Portfolio</h2>
+        <h2 className="text-2xl" id="react-portfolio">2. React Portfolio</h2>
         <p>Interactive react template, that is responsive and attension grabing design.</p>
 
         <Image
           className="mb-4 rounded-lg hover:scale-[102%] transition transition-all delay-150"
-          src={`https://edevhindi.com/wp-content/uploads/2024/10/Screenshot-from-2024-10-06-23-19-08.png`}
+          src={`https://edevhindi.com/wp-content/uploads/2024/10/Screenshot-from-2024-10-07-02-06-01.png`}
           alt="heera portfolio"
           width={1000}
           height={1000}
@@ -99,11 +100,43 @@ function Templates() {
 
         <Image
           className="mb-4 rounded-lg hover:scale-[102%] transition transition-all delay-150"
-          src={`https://edevhindi.com/wp-content/uploads/2024/10/Screenshot-from-2024-10-06-23-58-38.png`}
+          src={`https://edevhindi.com/wp-content/uploads/2024/10/Screenshot-from-2024-10-07-02-05-51-1.png`}
           alt="heera singh portfolio"
           width={1000}
           height={1000}
-        />
+        /> 
+
+<div className="flex gap-2">
+          <Link
+            target="_blank"
+            href={'https://edevhindi.com/heera-singh'}
+            className="flex gap-4  border px-4 py-2 rounded-xl"
+          >
+            <span className="flex items-center" id="live-preview">
+              Live Preview
+              <LinkIcon className="pl-2 w-5 h-5" />
+            </span>
+          </Link>
+          <Link 
+            href={'#'}
+            className="flex gap-4  border px-4 py-2 rounded-xl"
+          >
+            <span className="flex items-center" id="live-preview">
+              View source code
+              <LinkIcon className="pl-2 w-5 h-5" />
+            </span>
+          </Link>
+          <Link
+            target="_blank"
+            href={'https://github.com/heera9331'}
+            className="flex gap-4  border px-4 py-2 rounded-xl"
+          >
+            <span className="flex items-center" id="live-preview">
+              Author
+              <LinkIcon className="pl-2 w-5 h-5" />
+            </span>
+          </Link>
+        </div>
 
         <h2 id="used-tech2" className="my-4 text-2xl">Used technologies and libraries</h2>
 
@@ -115,9 +148,12 @@ function Templates() {
           <li className="text-gray-600">Google fonts</li>
           <li className="text-gray-600">Google icons</li>
         </ul>
+
+        <Separator className="h-10"/>
+
       </div>
 
-      <div className="md:col-span-12 lg:col-span-4 border-l pl-2">
+      <div className="md:col-span-12 lg:col-span-4 border-l pl-2 sticky top-2">
         <h2 className="font-semibold mb-2">Contents</h2>
         <div className="text-gray-500 flex flex-col gap-2">
           <Link href={'#page-title'}>
@@ -132,8 +168,14 @@ function Templates() {
           <Link href={'#about'}>
             4. About
           </Link>
+
+          <Link href={'#react-portfolio'}>
+            2. Portfolio
+          </Link>
         </div>
       </div>
+
+      
     </div>
   );
 }

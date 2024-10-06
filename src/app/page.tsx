@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   description:
     "Code Fragments is a website designed for learners and developers, offering resources and tools to enhance your productivity.",
   keywords:
-    "Code Fragments, react components, html and css components, html and css with tailwind, code examples",
+    "Code Fragments, react components, html and css components, html and css with tailwind, code examples, templates, web templates, free web templates",
   authors: [{ name: "Heera Singh Lodhi" }],
   openGraph: {
     title: "Code Fragments - Speedup Your Development Journey",
