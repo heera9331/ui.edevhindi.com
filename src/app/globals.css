@@ -105,3 +105,8 @@ body {
   justify-content: center;
   background-position: fixed;
 }
+
+p {
+  color: #6B7280;
+  margin: 8px 0;
+}
