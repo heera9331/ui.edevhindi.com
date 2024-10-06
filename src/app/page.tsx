@@ -6,8 +6,9 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import FormCode from "./_components/form-code";
 import { Toaster } from "react-hot-toast";
 import TableCode from "./_components/home-table-code";
-
 import { Metadata } from "next";
+import { ArrowRight, LinkIcon } from "lucide-react"
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: {
@@ -51,7 +52,10 @@ function HomePage() {
             variant={"default"}
             className="bg-muted/5 border border/90 hover:border transition-all delay-50 ease-in-out bg-black text-white hover:bg-black/90"
           >
-            <Link href={"#section-2"}>Explore</Link>
+            <Link href={"#section-2"} className="flex gap-2">
+              <span>Explore</span>
+              <ArrowRight />
+            </Link>
           </Button>
         </section>
         <section id="section-2" className="min-h-screen border-b">
@@ -97,7 +101,7 @@ function HomePage() {
           </Button>
         </section>
         <section className="min-h-screen border-b py-2">
-          <h1>HTML & CSS Blocks/Components</h1>
+          <h2 className="text-3xl">HTML & CSS Blocks/Components</h2>
 
           <div>
             <p className="text-gray-500 my-2">
@@ -109,6 +113,49 @@ function HomePage() {
 
           <Button className="my-4 bg-muted/5 border border/90 hover:border hover:bg-muted/5 transition-all delay-50 ease-in-out text-gray-500 hover:text-gray-600">
             <Link href={"/html-and-css/"}>View HTML & CSS</Link>
+          </Button>
+        </section>
+
+        {/* ================== Templates ==================== */}
+        <section className="min-h-screen border-b py-2">
+          <h2 className="text-3xl">Templates</h2>
+
+
+          <p className="text-gray-500 my-2">
+            Temlates are complete pages of website that is best fit for your next project, here are some template if you like it then download use in your next project
+          </p>
+
+          <h3 className="text-2xl mt-4">Portfolio Template</h3>
+
+          <p>
+            This is a sample portfolio template use it your own details.
+          </p>
+            
+          <Image
+          className="mb-4 rounded-lg hover:scale-[102%] transition transition-all delay-150"
+          src={`https://edevhindi.com/wp-content/uploads/2024/10/Screenshot-from-2024-10-06-23-19-08.png`} alt="heera portfolio" width={1000} height={1000}></Image>
+          <Image
+          className="mb-4 rounded-lg hover:scale-[102%] transition transition-all delay-150"
+          
+            src={`https://edevhindi.com/wp-content/uploads/2024/10/Screenshot-from-2024-10-06-23-58-38.png`} 
+            alt="heera singh portfolio" 
+            width={1000} 
+            height={1000}></Image>
+             
+          <Link 
+            target="_blank"
+            href={'https://edevhindi.com/portfolio'}
+            className="flex gap-4  border px-4 py-2 rounded-xl"
+          >
+            <span className="flex items-center">
+              Live Preview
+
+              <LinkIcon className="pl-2 w-5 h-5"/>
+            </span>
+            
+          </Link>
+          <Button className="my-4 bg-muted/5 border border/90 hover:border hover:bg-muted/5 transition-all delay-50 ease-in-out text-gray-500 hover:text-gray-600">
+            <Link href={"/templates/"}>View more templates</Link>
           </Button>
         </section>
       </div>
